@@ -3,14 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>WKWebView Framework | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="WKWebView Framework
+WKWebView的14个类与3个协议：
+WKBackForwardList: 之前访问过的 web 页面的列表，可以通过后退和前进动作来访问到。
+WKBackForwardListItem: webview 中后退列表里的某一个网页。
+WKFrameInfo: 包含一个网页的布局信息。
+WKNavigation: 包含一个网页的加载进度信息。
+WKNavi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WKWebView Framework">
+<meta property="og:url" content="http://yoursite.com/2016/09/15/1.HMViewKit/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="WKWebView Framework
+WKWebView的14个类与3个协议：
+WKBackForwardList: 之前访问过的 web 页面的列表，可以通过后退和前进动作来访问到。
+WKBackForwardListItem: webview 中后退列表里的某一个网页。
+WKFrameInfo: 包含一个网页的布局信息。
+WKNavigation: 包含一个网页的加载进度信息。
+WKNavi">
+<meta property="og:updated_time" content="2016-11-22T04:27:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="WKWebView Framework">
+<meta name="twitter:description" content="WKWebView Framework
+WKWebView的14个类与3个协议：
+WKBackForwardList: 之前访问过的 web 页面的列表，可以通过后退和前进动作来访问到。
+WKBackForwardListItem: webview 中后退列表里的某一个网页。
+WKFrameInfo: 包含一个网页的布局信息。
+WKNavigation: 包含一个网页的加载进度信息。
+WKNavi">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,63 +81,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-2.事件的产生与传递" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/15/2.事件的产生与传递/" class="article-date">
-  <time datetime="2016-10-15T08:44:10.000Z" itemprop="datePublished">2016-10-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/15/2.事件的产生与传递/">2.事件的产生与传递</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>02-事件的产生与传递</p>
-<pre><code>1.事件是怎么样产生与传递的?
-当发生一个触摸事件后,系统会将该事件加入到一个由UIApplication管理的事件队列中.
-UIApplication会从事件队列中取出最前面的事件，并将事件分发下去以便处理.
-主窗口会在视图层次结构中找到一个最合适的视图来处理触摸事件
-触摸事件的传递是从父控件传递到子控件的.
-如果一个父控件不能接收事件,那么它里面的了子控件也不能够接收事件.
-
-2.一个控件什么情况下不能够接收事件.
-    1.不接收用户交互时不能够处理事件
-        userInteractionEnabled = NO
-
-    2.当一个控件隐藏的时候不能够接收事件
-        Hidden = YES的时候
-    3.当一个控件为透明白时候也不能够接收事件
-
-    注意:UIImageView的userInteractionEnabled默认就是NO，
-        因此UIImageView以及它的子控件默认是不能接收触摸事件的
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/15/2.事件的产生与传递/" data-id="civt03s5o0001blla9crhcxuh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1.HMViewKit" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-1.HMViewKit" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/09/15/1.HMViewKit/" class="article-date">
   <time datetime="2016-09-15T08:44:10.000Z" itemprop="datePublished">2016-09-15</time>
@@ -128,8 +94,8 @@ UIApplication会从事件队列中取出最前面的事件，并将事件分发�
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/15/1.HMViewKit/">WKWebView Framework</a>
+    <h1 class="article-title" itemprop="name">
+      WKWebView Framework
     </h1>
   
 
@@ -166,70 +132,28 @@ UIApplication会从事件队列中取出最前面的事件，并将事件分发�
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-3.响应" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/03/15/3.响应/" class="article-date">
-  <time datetime="2016-03-15T08:44:10.000Z" itemprop="datePublished">2016-03-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2016/10/15/2.事件的产生与传递/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          2.事件的产生与传递
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/15/3.响应/">3.事件响应</a>
-    </h1>
   
+    <a href="/2016/03/15/3.响应/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">3.事件响应</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>07-事件响应</p>
-<pre><code>用户点击屏幕后产生的一个触摸事件，经过一系列的传递过程后，会找到最合适的视图控件来处理这个事件,
-找到最合适的视图控件后,就会调用控件的touches方法来作具体的事件处理
-那这些touches方法的默认做法是将事件顺着响应者链条向上传递，将事件交给上一个响应者进行处理
-
-什么是响应者链条?
-是由多个响应者对象连接起来的链条.
-
-什么是响应者对象?
-继承了UIResponder对象我们称之为响应者对象,也就是能处理事件的对象
-
-事件传递的完整过程?
-在产生一个事件时,系统会将该事件加入到一个由UIApplication管理的事件队列中,
-UIApplication会从事件队列中取出最前面的事件,将它传递给先发送事件给应用程序的主窗口.
-主窗口会调用hitTest方法寻找最适合的视图控件,找到后就会调用视图控件的touches方法来做具体的事情.
-当调用touches方法,它的默认做法, 就会将事件顺着响应者链条往上传递，
-传递给上一个响应者,接着就会调用上一个响应者的touches方法
-
-如何去寻找上一个响应者?
-1.如果当前的View是控制器的View,那么控制器就是上一个响应者.
-2.如果当前的View不是控制器的View,那么它的父控件就是上一个响应者.
-3.在视图层次结构的最顶级视图，如果也不能处理收到的事件或消息，则其将事件或消息传递给window对象进行处理
-4.如果window对象也不处理，则其将事件或消息传递给UIApplication对象
-5.如果UIApplication也不能处理该事件或消息，则将其丢弃
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/15/3.响应/" data-id="civt03s5s0002bllaaw5ifhs1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         

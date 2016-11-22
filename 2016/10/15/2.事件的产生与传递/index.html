@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>2.事件的产生与传递 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="02-事件的产生与传递
+1.事件是怎么样产生与传递的?
+当发生一个触摸事件后,系统会将该事件加入到一个由UIApplication管理的事件队列中.
+UIApplication会从事件队列中取出最前面的事件，并将事件分发下去以便处理.
+主窗口会在视图层次结构中找到一个最合适的视图来处理触摸事件
+触摸事件的传递是从父控件传递到子控件的.
+如果一个父控件不能接收事件,那么它里面的了子控件也不能够接收事">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2.事件的产生与传递">
+<meta property="og:url" content="http://yoursite.com/2016/10/15/2.事件的产生与传递/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="02-事件的产生与传递
+1.事件是怎么样产生与传递的?
+当发生一个触摸事件后,系统会将该事件加入到一个由UIApplication管理的事件队列中.
+UIApplication会从事件队列中取出最前面的事件，并将事件分发下去以便处理.
+主窗口会在视图层次结构中找到一个最合适的视图来处理触摸事件
+触摸事件的传递是从父控件传递到子控件的.
+如果一个父控件不能接收事件,那么它里面的了子控件也不能够接收事">
+<meta property="og:updated_time" content="2016-11-22T02:46:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2.事件的产生与传递">
+<meta name="twitter:description" content="02-事件的产生与传递
+1.事件是怎么样产生与传递的?
+当发生一个触摸事件后,系统会将该事件加入到一个由UIApplication管理的事件队列中.
+UIApplication会从事件队列中取出最前面的事件，并将事件分发下去以便处理.
+主窗口会在视图层次结构中找到一个最合适的视图来处理触摸事件
+触摸事件的传递是从父控件传递到子控件的.
+如果一个父控件不能接收事件,那么它里面的了子控件也不能够接收事">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2.事件的产生与传递" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/15/2.事件的产生与传递/" class="article-date">
+  <time datetime="2016-10-15T08:44:10.000Z" itemprop="datePublished">2016-10-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2.事件的产生与传递
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>02-事件的产生与传递</p>
+<pre><code>1.事件是怎么样产生与传递的?
+当发生一个触摸事件后,系统会将该事件加入到一个由UIApplication管理的事件队列中.
+UIApplication会从事件队列中取出最前面的事件，并将事件分发下去以便处理.
+主窗口会在视图层次结构中找到一个最合适的视图来处理触摸事件
+触摸事件的传递是从父控件传递到子控件的.
+如果一个父控件不能接收事件,那么它里面的了子控件也不能够接收事件.
+
+2.一个控件什么情况下不能够接收事件.
+    1.不接收用户交互时不能够处理事件
+        userInteractionEnabled = NO
+
+    2.当一个控件隐藏的时候不能够接收事件
+        Hidden = YES的时候
+    3.当一个控件为透明白时候也不能够接收事件
+
+    注意:UIImageView的userInteractionEnabled默认就是NO，
+        因此UIImageView以及它的子控件默认是不能接收触摸事件的
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/10/15/2.事件的产生与传递/" data-id="civt03s5o0001blla9crhcxuh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/09/15/1.HMViewKit/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">WKWebView Framework</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/15/2.事件的产生与传递/">2.事件的产生与传递</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/15/1.HMViewKit/">WKWebView Framework</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/15/3.响应/">3.事件响应</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
