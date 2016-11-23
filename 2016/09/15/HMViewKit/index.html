@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016/9 | Wayment</title>
+  <title>WKWebView Framework | Wayment</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="擅长各项前端技能，深入研究移动端开发与前端性能。非专业视觉设计师。此为博客一枚。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Wayment">
-<meta property="og:url" content="http://yoursite.com/archives/2016/09/index.html">
+  <meta name="description" content="WKWebView的14个类与3个协议：
+WKBackForwardList: 之前访问过的 web 页面的列表，可以通过后退和前进动作来访问到。
+WKBackForwardListItem: webview 中后退列表里的某一个网页。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WKWebView Framework">
+<meta property="og:url" content="http://yoursite.com/2016/09/15/HMViewKit/index.html">
 <meta property="og:site_name" content="Wayment">
-<meta property="og:description" content="擅长各项前端技能，深入研究移动端开发与前端性能。非专业视觉设计师。此为博客一枚。">
+<meta property="og:description" content="WKWebView的14个类与3个协议：
+WKBackForwardList: 之前访问过的 web 页面的列表，可以通过后退和前进动作来访问到。
+WKBackForwardListItem: webview 中后退列表里的某一个网页。">
+<meta property="og:updated_time" content="2016-11-23T06:30:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wayment">
-<meta name="twitter:description" content="擅长各项前端技能，深入研究移动端开发与前端性能。非专业视觉设计师。此为博客一枚。">
+<meta name="twitter:title" content="WKWebView Framework">
+<meta name="twitter:description" content="WKWebView的14个类与3个协议：
+WKBackForwardList: 之前访问过的 web 页面的列表，可以通过后退和前进动作来访问到。
+WKBackForwardListItem: webview 中后退列表里的某一个网页。">
   
     <link rel="alternative" href="/atom.xml" title="Wayment" type="application/atom+xml">
   
@@ -144,54 +151,111 @@
 </nav>
 
       <div class="body-wrap">
+        <article id="post-HMViewKit" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
         
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/09/15/HMViewKit/" class="archive-article-date">
-  	<time datetime="2016-09-15T08:44:10.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/09/15/HMViewKit/">WKWebView Framework</a>
+    <h1 class="article-title" itemprop="name">
+      WKWebView Framework
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>WKWebView的14个类与3个协议：</p>
+<p>WKBackForwardList: 之前访问过的 web 页面的列表，可以通过后退和前进动作来访问到。</p>
+<p>WKBackForwardListItem: webview 中后退列表里的某一个网页。</p>
+<a id="more"></a>
+<p>WKFrameInfo: 包含一个网页的布局信息。</p>
+<p>WKNavigation: 包含一个网页的加载进度信息。</p>
+<p>WKNavigationAction: 包含可能让网页导航变化的信息，用于判断是否做出导航变化。</p>
+<p>WKNavigationResponse: 包含可能让网页导航变化的返回内容信息，用于判断是否做出导航变化。</p>
+<p>WKPreferences: 概括一个 webview 的偏好设置。</p>
+<p>WKProcessPool: 表示一个 web 内容加载池。 </p>
+<p>WKUserContentController: 提供使用 JavaScript post 信息和注射 script 的方法。</p>
+<p>WKScriptMessage: 包含网页发出的信息。</p>
+<p>WKUserScript: 表示可以被网页接受的用户脚本。 </p>
+<p>WKWebViewConfiguration: 初始化 webview 的设置。</p>
+<p>WKWindowFeatures: 指定加载新网页时的窗口属性。</p>
+<p>WKWebsiteDataStore: 包含网页数据存储和查找。</p>
+<p>WKNavigationDelegate: 提供了追踪主窗口网页加载过程和判断主窗口和子窗口是否进行页面加载新页面的相关方法。</p>
+<p>WKUIDelegate: 提供用原生控件显示网页的方法回调。</p>
+<p>WKScriptMessageHandler: 提供从网页中收消息的回调方法。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/09/15/HMViewKit/" class="archive-article-date">
+  	<time datetime="2016-09-15T08:44:10.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-15</time>
+</a>
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/记录/">记录</a></li></ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+  
+<nav id="article-nav">
+  
+    <a href="/2016/10/15/事件的产生与传递/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          2.事件的产生与传递
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/07/30/文章博客记录/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">文章博客记录</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
 
 
       </div>
@@ -214,8 +278,8 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
